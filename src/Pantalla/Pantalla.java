@@ -1,5 +1,7 @@
 package Pantalla;
 
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -69,6 +71,7 @@ public class Pantalla extends javax.swing.JFrame {
         kelvinRB.setText("A Kelvin");
 
         BTNconvertir.setText("CONVERTIR");
+        BTNconvertir.addActionListener(this::BTNconvertirActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -154,6 +157,42 @@ public class Pantalla extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BTNconvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNconvertirActionPerformed
+        // TODO add your handling code here:
+        try {
+        // Leemos el texto ingresado y lo convertimos a número
+        double celsius = Double.parseDouble(entradaTextField.getText());
+        double resultado;
+        String mensaje;
+
+        // Verificamos qué opción seleccionó el usuario
+        if (farenheitRB.isSelected()) {
+            resultado = celsius * 9.0 / 5.0 + 32;
+            mensaje = "La temperatura en grados fahrenheit es: " + String.format("%.1f", resultado);
+        } else if (celsiusRB.isSelected()) {
+            resultado = celsius;
+            mensaje = "La temperatura en grados celsius es: " + resultado;
+        } else if (kelvinRB.isSelected()) {
+            resultado = celsius + 273.15;
+            mensaje = "La temperatura en Kelvin es: " + String.format("%.2f", resultado);
+        } else if (radianesRB.isSelected()) {
+            resultado = celsius * (Math.PI / 180.0);
+            mensaje = "El valor en radianes es: " + String.format("%.4f", resultado);
+        } else {
+            // En caso de que no haya seleccionado ninguno
+            JOptionPane.showMessageDialog(this, "Por favor seleccione una opción de conversión.");
+            return; // Se detiene solo si no marcó ninguno
+        }
+
+        // Muestra la ventana con el resultado final
+        JOptionPane.showMessageDialog(this, mensaje);
+
+    } catch (NumberFormatException e) {
+        // Muestra mensaje si ingresó letras o dejó el campo vacío
+        JOptionPane.showMessageDialog(this, "Por favor ingrese un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_BTNconvertirActionPerformed
 
     /**
      * @param args the command line arguments

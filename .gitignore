@@ -1,6 +1,5 @@
 # === NetBeans (permitir abrir proyecto, evitar conflictos) ===
 nbproject/private/
-nbproject/build-impl.xml
 
 # === Compilados de Java ===
 *.class
@@ -11,9 +10,6 @@ dist/
 out/
 target/
 
-# === Librerías externas ===
-# Permitimos libs/ para que se compartan los .jar
-# !libs/
 # === Archivos temporales ===
 *.log
 *.bak

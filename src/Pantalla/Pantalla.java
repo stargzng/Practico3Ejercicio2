@@ -59,7 +59,6 @@ public class Pantalla extends javax.swing.JFrame {
         buttonGroup1.add(farenheitRB);
         farenheitRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         farenheitRB.setText("A Farenheit");
-        farenheitRB.addActionListener();
 
         buttonGroup1.add(radianesRB);
         radianesRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -155,14 +154,6 @@ public class Pantalla extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void farenheitRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farenheitRBActionPerformed
-        if (farenheitRB.isSelected()) {
-            kelvinRB.setSelected(false);
-            celsiusRB.setSelected(false);
-            radianesRB.setSelected(false);
-        }
-    }//GEN-LAST:event_farenheitRBActionPerformed
 
     /**
      * @param args the command line arguments

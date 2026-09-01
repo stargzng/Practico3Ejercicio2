@@ -29,45 +29,47 @@ public class Pantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        jLabelTiutulo = new javax.swing.JLabel();
+        jLabel2Titulo = new javax.swing.JLabel();
+        entradaTextField = new javax.swing.JTextField();
+        celsiusRB = new javax.swing.JRadioButton();
+        farenheitRB = new javax.swing.JRadioButton();
+        radianesRB = new javax.swing.JRadioButton();
+        kelvinRB = new javax.swing.JRadioButton();
+        BTNconvertir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setText("conversor de temperatura");
+        jLabelTiutulo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabelTiutulo.setText("conversor de temperatura");
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel2.setText("ingrese temperatura en grados:");
+        jLabel2Titulo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel2Titulo.setText("ingrese temperatura en grados:");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        entradaTextField.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        entradaTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jRadioButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jRadioButton1.setText("A Celsius");
-        jRadioButton1.addActionListener(this::jRadioButton1ActionPerformed);
+        buttonGroup1.add(celsiusRB);
+        celsiusRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        celsiusRB.setText("A Celsius");
 
-        jRadioButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jRadioButton2.setText("A Farenheit");
-        jRadioButton2.addActionListener(this::jRadioButton2ActionPerformed);
+        buttonGroup1.add(farenheitRB);
+        farenheitRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        farenheitRB.setText("A Farenheit");
+        farenheitRB.addActionListener();
 
-        jRadioButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jRadioButton3.setText("A Radianes");
-        jRadioButton3.addActionListener(this::jRadioButton3ActionPerformed);
+        buttonGroup1.add(radianesRB);
+        radianesRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        radianesRB.setText("A Radianes");
 
-        jRadioButton4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jRadioButton4.setText("A Kelvin");
-        jRadioButton4.addActionListener(this::jRadioButton4ActionPerformed);
+        buttonGroup1.add(kelvinRB);
+        kelvinRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        kelvinRB.setText("A Kelvin");
 
-        jButton1.setText("CONVERTIR");
+        BTNconvertir.setText("CONVERTIR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -75,49 +77,49 @@ public class Pantalla extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(jLabelTiutulo)
                 .addGap(37, 37, 37))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2))
+                        .addComponent(jLabel2Titulo))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(119, 119, 119)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(entradaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton2))
+                            .addComponent(kelvinRB)
+                            .addComponent(farenheitRB))
                         .addGap(24, 24, 24)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton1)))
+                            .addComponent(radianesRB)
+                            .addComponent(celsiusRB)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(BTNconvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jLabel1)
+                .addComponent(jLabelTiutulo)
                 .addGap(40, 40, 40)
-                .addComponent(jLabel2)
+                .addComponent(jLabel2Titulo)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(entradaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(celsiusRB)
+                    .addComponent(farenheitRB))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(radianesRB)
+                    .addComponent(kelvinRB))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BTNconvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -154,21 +156,13 @@ public class Pantalla extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
-
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    private void farenheitRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farenheitRBActionPerformed
+        if (farenheitRB.isSelected()) {
+            kelvinRB.setSelected(false);
+            celsiusRB.setSelected(false);
+            radianesRB.setSelected(false);
+        }
+    }//GEN-LAST:event_farenheitRBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,15 +190,16 @@ public class Pantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BTNconvertir;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JRadioButton celsiusRB;
+    private javax.swing.JTextField entradaTextField;
+    private javax.swing.JRadioButton farenheitRB;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel2Titulo;
+    private javax.swing.JLabel jLabelTiutulo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JRadioButton kelvinRB;
+    private javax.swing.JRadioButton radianesRB;
     // End of variables declaration//GEN-END:variables
 }

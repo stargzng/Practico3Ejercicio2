@@ -36,12 +36,12 @@ public class Pantalla extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabelTiutulo = new javax.swing.JLabel();
         jLabel2Titulo = new javax.swing.JLabel();
-        entradaTextField = new javax.swing.JTextField();
+        txtBox = new javax.swing.JTextField();
         celsiusRB = new javax.swing.JRadioButton();
         farenheitRB = new javax.swing.JRadioButton();
         radianesRB = new javax.swing.JRadioButton();
         kelvinRB = new javax.swing.JRadioButton();
-        BTNconvertir = new javax.swing.JButton();
+        btnConvert = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,8 +51,8 @@ public class Pantalla extends javax.swing.JFrame {
         jLabel2Titulo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2Titulo.setText("ingrese temperatura en grados:");
 
-        entradaTextField.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        entradaTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtBox.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtBox.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         buttonGroup1.add(celsiusRB);
         celsiusRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -70,8 +70,8 @@ public class Pantalla extends javax.swing.JFrame {
         kelvinRB.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         kelvinRB.setText("A Kelvin");
 
-        BTNconvertir.setText("CONVERTIR");
-        BTNconvertir.addActionListener(this::BTNconvertirActionPerformed);
+        btnConvert.setText("CONVERTIR");
+        btnConvert.addActionListener(this::btnConvertActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -88,7 +88,7 @@ public class Pantalla extends javax.swing.JFrame {
                         .addComponent(jLabel2Titulo))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(119, 119, 119)
-                        .addComponent(entradaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtBox, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,7 +100,7 @@ public class Pantalla extends javax.swing.JFrame {
                             .addComponent(celsiusRB)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(BTNconvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnConvert, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,7 +111,7 @@ public class Pantalla extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(jLabel2Titulo)
                 .addGap(18, 18, 18)
-                .addComponent(entradaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtBox, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(celsiusRB)
@@ -121,7 +121,7 @@ public class Pantalla extends javax.swing.JFrame {
                     .addComponent(radianesRB)
                     .addComponent(kelvinRB))
                 .addGap(18, 18, 18)
-                .addComponent(BTNconvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnConvert, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -158,11 +158,11 @@ public class Pantalla extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BTNconvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNconvertirActionPerformed
+    private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
         // TODO add your handling code here:
         try {
         // Leemos el texto ingresado y lo convertimos a número
-        double celsius = Double.parseDouble(entradaTextField.getText());
+        double celsius = Double.parseDouble(txtBox.getText());
         double resultado;
         String mensaje;
 
@@ -192,7 +192,7 @@ public class Pantalla extends javax.swing.JFrame {
         // Muestra mensaje si ingresó letras o dejó el campo vacío
         JOptionPane.showMessageDialog(this, "Por favor ingrese un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
     }
-    }//GEN-LAST:event_BTNconvertirActionPerformed
+    }//GEN-LAST:event_btnConvertActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,10 +220,9 @@ public class Pantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTNconvertir;
+    private javax.swing.JButton btnConvert;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton celsiusRB;
-    private javax.swing.JTextField entradaTextField;
     private javax.swing.JRadioButton farenheitRB;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel2Titulo;
@@ -231,5 +230,6 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton kelvinRB;
     private javax.swing.JRadioButton radianesRB;
+    private javax.swing.JTextField txtBox;
     // End of variables declaration//GEN-END:variables
 }
